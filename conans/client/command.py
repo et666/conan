@@ -447,7 +447,10 @@ class Command(object):
                                                                 ' The "pattern" parameter '
                                                                 'has to be a package recipe '
                                                                 'reference: MyPackage/1.2'
-                                                                '@user/channel')
+                                                                '@user/channel'
+                                                                'With -q outdated it is possible'
+                                                                'to remove packages outdated'
+                                                                'from recipe')
         args = parser.parse_args(*args)
         reference = self._check_query_parameter_and_get_reference(args.pattern, args.query)
 
@@ -522,7 +525,10 @@ class Command(object):
                                                                 ' The "pattern" parameter '
                                                                 'has to be a package recipe '
                                                                 'reference: MyPackage/1.2'
-                                                                '@user/channel')
+                                                                '@user/channel '
+                                                                'With -q outdated it is possible'
+                                                                'to search for packages outdated'
+                                                                'from recipe')
         args = parser.parse_args(*args)
         outputer = CommandOutputer(self._user_io, self._client_cache)
 
